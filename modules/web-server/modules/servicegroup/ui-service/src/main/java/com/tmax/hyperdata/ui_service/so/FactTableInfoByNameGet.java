@@ -1,5 +1,6 @@
 package com.tmax.hyperdata.ui_service.so;
 
+import com.tmax.hyperdata.ui_service.dto.FactTableInfo;
 import com.tmax.hyperdata.ui_service.dto.FactTableInfoList;
 import com.tmax.proobject.core.exception.ProObjectWebException;
 import com.tmax.proobject.engine.servicemanager.ServiceManager;
@@ -27,13 +28,7 @@ public class FactTableInfoByNameGet implements ServiceObject {
             RequestContext requestContext = ServiceManager.getCurrentRequestContext();
             ProObjectRequest requestMessage = (ProObjectRequest) requestContext.getRequest();
 
-            String factTableName = null;
-            String[] values = requestMessage.getQueryString("factTableName");
-            if (values != null) {
-                for (String value : values) {
-                    factTableName = value;
-                }
-            }
+            String factTableName = requestMessage.getREST("factTableName");
 
             if (factTableName == null)
                 factTableInfoList.setFactTableInfoList(factTableInfoService.getAllFactTableList());
