@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+<!--
+    <groupId>com.tmax</groupId>
+    <artifactId>flowengine</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>flowengine</name>
+    <url>http://maven.apache.org</url>
+-->
+<!--    <parent>
+         [Monitoring AOP] 를 위해 필요한 parent	
+        <groupId>com.tmax.proobject</groupId>
+        <artifactId>proobject-meta</artifactId>
+        <version>7.0.0.0</version>
+        <relativePath>../proobject-meta</relativePath>
+    </parent>-->
+    
+    <artifactId>flowengine</artifactId>
+    <packaging>jar</packaging>
+    <name>flowengine</name>
+    
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.tmax.proobject</groupId>
+            <artifactId>proobject-logger</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tmax.proobject</groupId>
+            <artifactId>proobject-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tmax.proobject</groupId>
+            <artifactId>proobject-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tmax.proobject</groupId>
+            <artifactId>proobject-dataobject</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tmax.proobject</groupId>
+            <artifactId>proobject-runtime</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tmax.proobject</groupId>
+            <artifactId>proobject-network</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tmax.proobject</groupId>
+            <artifactId>proobject-srcgen-dto</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <compilerArguments>
+                        <bootclasspath>${java.home}/lib/rt.jar${path.separator}${java.home}/lib/jce.jar</bootclasspath>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <configuration>
+                    <schemaDirectory>src/main/resources/schemas</schemaDirectory>
+                    <bindingDirectory>src/main/resources/schemas</bindingDirectory>
+                    <generateDirectory>target/generated-sources/jaxb</generateDirectory>
+                    <markGenerated>true</markGenerated>
+                    <removeOldOutput>true</removeOldOutput>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.tmax.proobject</groupId>
+                <artifactId>proobject-plugin-source-generator</artifactId>
+                <inherited>true</inherited>
+                <configuration>
+                    <excludes>
+                        <param>Test.*</param>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

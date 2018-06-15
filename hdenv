@@ -1,0 +1,15 @@
+#! /bin/sh
+
+if ! test -d $1 ; then
+     echo "directory not found"; return
+fi
+
+unset HD_HOME CDPATH
+	  
+export HD_HOME=$1
+	  
+export PATH=$HD_HOME/bin:$PATH
+export CDPATH=./:$HD_HOME:$HD_HOME/modules
+	  
+echo "HD_HOME:    $HD_HOME"
+echo "Branch :    Trunk"

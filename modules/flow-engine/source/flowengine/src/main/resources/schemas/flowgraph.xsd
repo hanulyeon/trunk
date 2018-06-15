@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:graph="http://www.tmax.co.kr/flowengine/flowgraph"
+    targetNamespace="http://www.tmax.co.kr/flowengine/flowgraph"
+>
+    <complexType name="flow-graph-meta">
+        <sequence>
+            <element name="name" type="string" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="nodes" type="graph:flow-node-meta-container" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="edges" type="graph:flow-edge-meta-container" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+        <attribute name="id" type="int">
+            <annotation>
+                <documentation>
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+    
+    <complexType name="flow-node-meta-container">
+        <sequence>
+            <element name="node" type="graph:flow-node-meta" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="flow-node-meta">
+        <sequence>
+            <element name="name" type="string" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="joint" type="graph:joint-type" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="block" type="graph:block-meta" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="activity" type="graph:activity-meta" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="from" type="int" minOccurs="1" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="to" type="int" minOccurs="1" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+        <attribute name="id" type="int">
+            <annotation>
+                <documentation>
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+    
+    <complexType name="block-meta">
+        <sequence>
+            <element name="flow-graphs" type="graph:flow-graph-meta" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+        <attribute name="concurrency" type="int">
+            <annotation>
+                <documentation>
+                    Block 의 Graph 를 동시에 몇 개 수행시킬지를 지정한다.
+                </documentation>
+            </annotation>
+        </attribute>
+        <attribute name="loop-count" type="int">
+            <annotation>
+                <documentation>
+                    Block 의 Graph 를 최대 몇 번 수행할지 여부를 지정한다.
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+    
+    <complexType name="flow-edge-meta-container">
+        <sequence>
+            <element name="edge" type="graph:flow-edge-meta" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="flow-edge-meta">
+        <sequence>
+            <element name="next-node" type="int" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="conditions" type="graph:conditions" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+        <attribute name="id" type="int">
+            <annotation>
+                <documentation>
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+    
+    <complexType name="activity-meta">
+        <sequence>
+            <element name="type" type="int" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="input" type="graph:context-parameter" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="output" type="graph:context-parameter" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <simpleType name="joint-type">
+        <restriction base="string">
+            <enumeration value="AND"></enumeration>
+            <enumeration value="OR"></enumeration>
+            <enumeration value="XOR"></enumeration>
+        </restriction>
+    </simpleType>
+    
+    <complexType name="context-parameter">
+        <sequence>
+            <element name="field" type="graph:context-field" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+        <attribute name="dto" type="string"></attribute>
+    </complexType>
+    
+    <complexType name="context-field">
+        <sequence>
+            <element name="name" type="string" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="dto-field" type="string" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="conditions">
+        <sequence>
+            <element name="condition" type="graph:condition" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="condition">
+        <sequence>
+            <element name="type" type="int" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+</schema>

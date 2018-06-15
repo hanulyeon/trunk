@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: com.tmax.hyperdata:hd-web-common:1.0" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-batch:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-batch-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-core:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-core-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-dataobject:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-dataobject-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-di:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-di-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-logger:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-logger-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-model:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-model-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-monitoring:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-monitoring-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-network:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-network-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-promapper:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-promapper-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-runtime:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-runtime-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-scheduler:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-scheduler-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: proobject:proobject-util:7.0.0.0.596">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../lib/proobject/proobject-util-7.0.0.0.596.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

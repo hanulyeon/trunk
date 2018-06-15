@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:dto xmlns:ns2="http://www.tmax.co.kr/proobject/dataobject"
+xmlns:ns3="http://www.tmax.co.kr/proobject/message"
+xmlns:ns4="http://www.example.org/externalObjectConfig"
+xmlns:ns5="http://www.tmax.co.kr/proobject/dto"
+xmlns:ns6="http://www.tmax.co.kr/proobject/dbio-config"
+xmlns:ns7="http://www.tmax.co.kr/proobject/resource"
+xmlns:ns8="http://www.tmax.co.kr/proobject/property"
+xmlns:ns9="http://www.tmax.co.kr/proobject/siteConfig"
+    stringDefaultValue="empty"
+    stringModifiedNullable="false"
+    resourceGroup=""
+>
+    <ns5:dtoField fieldType="long"      logicalName="id"    physicalName="id"   includeDtoPath="" includeDtoName="" length="16" array=""    decimal="-1" keyword="" comments="" metaId="1489569170941" referenceId="" attributeTag="" referenceFieldId="" fieldControlTag="" nullable="false"/>
+    <ns5:dtoField fieldType="String"    logicalName="name"  physicalName="name" includeDtoPath="" includeDtoName="" length="16" array=""    decimal="-1" keyword="" comments="" metaId="1489569170941" referenceId="" attributeTag="" referenceFieldId="" fieldControlTag="" nullable="false"/>
+    <ns5:dtoField fieldType="String"    logicalName="type"  physicalName="type" includeDtoPath="" includeDtoName="" length="16" array=""    decimal="-1" keyword="" comments="" metaId="1489569170941" referenceId="" attributeTag="" referenceFieldId="" fieldControlTag="" nullable="false"/>
+</ns5:dto>

@@ -1,0 +1,20 @@
+<!DOCTYPE xml>
+<jxb:bindings version="2.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+                            xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	                        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xmlns:cond="http://www.tmax.co.kr/flowengine/flowgraph/condition">
+    <jxb:bindings schemaLocation="condition.xsd" node="/xs:schema">
+        <!-- Illustrate binding model group to content interfaces. -->
+        <jxb:schemaBindings>
+            <jxb:package name="com.tmax.flowengine.meta.flowgraph.condition" />
+        </jxb:schemaBindings>
+        <jxb:globalBindings>
+            <!--
+            <jxb:javaType name="java.util.concurrent.TimeUnit" xmlType="xs:timeunit"
+                    parseMethod="java.util.concurrent.TimeUnit.valueOf"
+                    printMethod="java.util.concurrent.TimeUnit.toString"/>
+            <xjc:javaType name="java.util.concurrent.TimeUnit" xmlType="xs:timeunit" adapter="com.ltmax.flowengine.meta.adapter.TimeUnitAdapter"/>
+            -->
+        </jxb:globalBindings>
+    </jxb:bindings>
+</jxb:bindings>

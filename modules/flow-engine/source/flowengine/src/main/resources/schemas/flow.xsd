@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:flow="http://www.tmax.co.kr/flowengine/flow"
+    xmlns:ctx="http://www.tmax.co.kr/flowengine/flowcontext"
+    xmlns:graph="http://www.tmax.co.kr/flowengine/flowgraph"
+    targetNamespace="http://www.tmax.co.kr/flowengine/flow"
+>
+    <import schemaLocation="flowgraph.xsd"      namespace="http://www.tmax.co.kr/flowengine/flowgraph" />
+    <import schemaLocation="flowcontext.xsd"    namespace="http://www.tmax.co.kr/flowengine/flowcontext" />
+    
+    <element name="flow" type="flow:flow-meta" />
+    
+    <complexType name="flow-meta">
+        <sequence>
+            <element name="id" type="int" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="name" type="string" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="graph" type="graph:flow-graph-meta" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="context" type="ctx:flow-context-meta" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+</schema>

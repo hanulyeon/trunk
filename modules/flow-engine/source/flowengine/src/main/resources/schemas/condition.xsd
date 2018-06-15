@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified"
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:graph="http://www.tmax.co.kr/flowengine/flowgraph"
+    xmlns:cond="http://www.tmax.co.kr/flowengine/flowgraph/condition"
+    targetNamespace="http://www.tmax.co.kr/flowengine/flowgraph/condition"
+>
+    <import schemaLocation="flowgraph.xsd" namespace="http://www.tmax.co.kr/flowengine/flowgraph" />
+        
+    <complexType name="condition-timeout">
+        <complexContent>
+            <extension base="graph:condition">
+		        <sequence>
+		            <element name="timeout" type="long" minOccurs="1" maxOccurs="1">
+		                <annotation>
+		                    <documentation>
+		                    </documentation>
+		                </annotation>
+		            </element>
+		        </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+</schema>

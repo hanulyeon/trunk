@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+이 파일은 JAXB(JavaTM Architecture for XML Binding) 참조 구현 2.2.11 버전을 통해 생성되었습니다. 
+<a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>를 참조하십시오. 
+이 파일을 수정하면 소스 스키마를 재컴파일할 때 수정 사항이 손실됩니다. 
+생성 날짜: 2018.03.06 시간 12:56:24 PM KST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.tmax.co.kr/flowengine/flowgraph/activity">
+    <schemaBindings map="false">
+      <package name="com.tmax.flowengine.meta.flowgraph.activity"/>
+    </schemaBindings>
+    <bindings scd="~tns:outbound-adapter-info">
+      <class ref="com.tmax.flowengine.meta.flowgraph.activity.OutboundAdapterInfo"/>
+    </bindings>
+    <bindings scd="~tns:activity-outbound">
+      <class ref="com.tmax.flowengine.meta.flowgraph.activity.ActivityOutbound"/>
+    </bindings>
+    <bindings scd="~tns:activity-logging">
+      <class ref="com.tmax.flowengine.meta.flowgraph.activity.ActivityLogging"/>
+    </bindings>
+    <bindings scd="~tns:activity-block">
+      <class ref="com.tmax.flowengine.meta.flowgraph.activity.ActivityBlock"/>
+    </bindings>
+    <bindings scd="~tns:activity-wait">
+      <class ref="com.tmax.flowengine.meta.flowgraph.activity.ActivityWait"/>
+    </bindings>
+    <bindings scd="~tns:adapter-type">
+      <typesafeEnumClass ref="com.tmax.flowengine.meta.flowgraph.activity.AdapterType"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.tmax.co.kr/flowengine/flowgraph">
+    <schemaBindings map="false">
+      <package name="com.tmax.flowengine.meta.flowgraph"/>
+    </schemaBindings>
+    <bindings scd="~tns:flow-graph-meta">
+      <class ref="com.tmax.flowengine.meta.flowgraph.FlowGraphMeta"/>
+    </bindings>
+    <bindings scd="~tns:flow-node-meta-container">
+      <class ref="com.tmax.flowengine.meta.flowgraph.FlowNodeMetaContainer"/>
+    </bindings>
+    <bindings scd="~tns:flow-node-meta">
+      <class ref="com.tmax.flowengine.meta.flowgraph.FlowNodeMeta"/>
+    </bindings>
+    <bindings scd="~tns:block-meta">
+      <class ref="com.tmax.flowengine.meta.flowgraph.BlockMeta"/>
+    </bindings>
+    <bindings scd="~tns:flow-edge-meta-container">
+      <class ref="com.tmax.flowengine.meta.flowgraph.FlowEdgeMetaContainer"/>
+    </bindings>
+    <bindings scd="~tns:flow-edge-meta">
+      <class ref="com.tmax.flowengine.meta.flowgraph.FlowEdgeMeta"/>
+    </bindings>
+    <bindings scd="~tns:activity-meta">
+      <class ref="com.tmax.flowengine.meta.flowgraph.ActivityMeta"/>
+    </bindings>
+    <bindings scd="~tns:context-parameter">
+      <class ref="com.tmax.flowengine.meta.flowgraph.ContextParameter"/>
+    </bindings>
+    <bindings scd="~tns:context-field">
+      <class ref="com.tmax.flowengine.meta.flowgraph.ContextField"/>
+    </bindings>
+    <bindings scd="~tns:conditions">
+      <class ref="com.tmax.flowengine.meta.flowgraph.Conditions"/>
+    </bindings>
+    <bindings scd="~tns:condition">
+      <class ref="com.tmax.flowengine.meta.flowgraph.Condition"/>
+    </bindings>
+    <bindings scd="~tns:joint-type">
+      <typesafeEnumClass ref="com.tmax.flowengine.meta.flowgraph.JointType"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.tmax.co.kr/flowengine/flowgraph/condition">
+    <schemaBindings map="false">
+      <package name="com.tmax.flowengine.meta.flowgraph.condition"/>
+    </schemaBindings>
+    <bindings scd="~tns:condition-timeout">
+      <class ref="com.tmax.flowengine.meta.flowgraph.condition.ConditionTimeout"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.tmax.co.kr/flowengine/application">
+    <schemaBindings map="false">
+      <package name="com.tmax.flowengine.meta.application"/>
+    </schemaBindings>
+    <bindings scd="~tns:flow-application-meta">
+      <class ref="com.tmax.flowengine.meta.application.FlowApplicationMeta"/>
+    </bindings>
+    <bindings scd="~tns:registered-flows">
+      <class ref="com.tmax.flowengine.meta.application.RegisteredFlows"/>
+    </bindings>
+    <bindings scd="~tns:registered-flow-info">
+      <class ref="com.tmax.flowengine.meta.application.RegisteredFlowInfo"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.tmax.co.kr/flowengine/flow">
+    <schemaBindings map="false">
+      <package name="com.tmax.flowengine.meta.flow"/>
+    </schemaBindings>
+    <bindings scd="~tns:flow-meta">
+      <class ref="com.tmax.flowengine.meta.flow.FlowMeta"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.tmax.co.kr/flowengine/flowcontext">
+    <schemaBindings map="false">
+      <package name="com.tmax.flowengine.meta.flow.context"/>
+    </schemaBindings>
+    <bindings scd="~tns:flow-context-meta">
+      <class ref="com.tmax.flowengine.meta.flow.context.FlowContextMeta"/>
+    </bindings>
+    <bindings scd="~tns:flow-variable-container">
+      <class ref="com.tmax.flowengine.meta.flow.context.FlowVariableContainer"/>
+    </bindings>
+    <bindings scd="~tns:flow-variable">
+      <class ref="com.tmax.flowengine.meta.flow.context.FlowVariable"/>
+    </bindings>
+    <bindings scd="~tns:flow-variable-type">
+      <typesafeEnumClass ref="com.tmax.flowengine.meta.flow.context.FlowVariableType"/>
+    </bindings>
+  </bindings>
+</bindings>
+

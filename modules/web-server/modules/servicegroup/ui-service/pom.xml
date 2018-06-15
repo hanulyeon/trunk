@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tmax.hyperdata</groupId>
+		<artifactId>hd-web-server</artifactId>
+		<version>1.0</version>
+		<relativePath>../../../</relativePath>
+	</parent>
+
+	<groupId>com.tmax.hyperdata</groupId>
+	<artifactId>hd-web-ui</artifactId>
+	<version>1.0</version>
+	<name>hd-web-ui</name>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.parent.directory>${basedir}/../../../</project.parent.directory>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.tmax.hyperdata</groupId>
+			<artifactId>hd-web-common</artifactId>
+			<version>1.0</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+</project> 

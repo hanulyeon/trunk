@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hd-web-common" />
+        <module name="hd-web-ui" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hd-df-engine" target="1.7" />
+      <module name="hd-ml-engine" target="1.7" />
+      <module name="hd-web-common" target="1.7" />
+      <module name="hd-web-server" target="1.7" />
+      <module name="hd-web-ui" target="1.7" />
+      <module name="hyperdata" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

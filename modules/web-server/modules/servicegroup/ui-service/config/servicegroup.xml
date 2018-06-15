@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE xml>
+<ns17:service-group
+	xmlns:to="http://www.tmaxsoft.com/proobject/resource/taskobject"
+	xmlns:ns16="http://www.tmax.co.kr/proobject/sourcecode" xmlns:ns17="http://www.tmax.co.kr/proobject/servicegroup"
+	xmlns:ns14="http://www.tmax.co.kr/proobject/jobobject" xmlns:ns15="http://www.tmax.co.kr/proobject/serviceobject-automatic"
+	xmlns:so="http://www.tmaxsoft.com/proobject/resource/serviceobject"
+	xmlns:ns18="http://www.tmax.co.kr/proobject/contents" xmlns:ns19="http://www.tmax.co.kr/proobject/siteConfig"
+	xmlns:ns21="http://www.tmax.co.kr/proobject/property" xmlns:ns9="http://www.tmax.co.kr/proobject/flow"
+	xmlns:ns22="http://www.tmax.co.kr/proobject/serverConfig" xmlns:ns23="http://www.tmaxsoft.com/proobject/resource"
+	xmlns:jo="http://www.tmaxsoft.com/proobject/resource/jobobject"
+	xmlns:ns5="http://www.tmax.co.kr/proobject/dataobject" xmlns:ns12="http://www.tmax.co.kr/proobject/serviceobject"
+	xmlns:ns6="http://www.example.org/externalObjectConfig" xmlns:ns13="http://www.tmax.co.kr/proobject/taskobject"
+	xmlns:ns7="http://www.tmax.co.kr/proobject/dto" xmlns:ns10="http://www.tmax.co.kr/proobject/dataobjectfactory"
+	xmlns:ns20="http://www.tmax.co.kr/proobject/probuilder_config"
+	xmlns:ns8="http://www.tmax.co.kr/proobject/mapping" xmlns:ns11="http://www.tmax.co.kr/proobject/bizobject"
+	xmlns:ns2="http://www.tmax.co.kr/proobject/resource" xmlns:bo="http://www.tmaxsoft.com/proobject/resource/bizobject"
+	xmlns:ns4="http://www.tmax.co.kr/proobject/application/runtime"
+	xmlns:ns3="http://www.tmax.co.kr/proobject/message" xmlns:xc="http://www.tmaxsoft.com/proobject/resource/contents"
+	xmlns:do="http://www.tmaxsoft.com/proobject/resource/dataobject">
+	<ns17:group-name>ui-service</ns17:group-name>
+	<ns17:messagebundle>com.tmax.proobject.example.message</ns17:messagebundle>
+	<ns17:language>en</ns17:language>
+
+    <ns17:service-object>
+        <ns17:name>projectCreate</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.ProjectCreate</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.Project</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.Project</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>projectDelete</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.ProjectDelete</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.Project</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.Project</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>projectsList</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.ProjectsList</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.Empty</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.ProjectList</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>modelCreate</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.ModelCreate</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.Model</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.Model</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+        <ns17:service-object>
+        <ns17:name>modelDelete</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.ModelDelete</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.Model</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.Model</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>modelsList</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.ModelsList</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.Empty</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.ModelList</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>testGet</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.test</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.Empty</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.Empty</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+	<!-- Olap Project Service -->
+    <ns17:service-object>
+        <ns17:name>AllOlapProjectInfoGet</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.AllOlapProjectInfoGet</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapProjectInfo</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapProjectInfoList</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>OlapProjectInfoCreate</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapProjectInfoAdd</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapProjectInfo</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapProjectInfo</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+	<ns17:service-object>
+		<ns17:name>OlapProjectInfoUpdate</ns17:name>
+		<ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapProjectInfoModify</ns17:class-name>
+		<ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapProjectInfo</ns17:input-dto>
+		<ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapProjectInfo</ns17:output-dto>
+		<ns17:service-type>COMPLEX</ns17:service-type>
+	</ns17:service-object>
+	<ns17:service-object>
+		<ns17:name>OlapProjectInfoDelete</ns17:name>
+		<ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapProjectInfoDelete</ns17:class-name>
+		<ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapProjectInfo</ns17:input-dto>
+		<ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapProjectInfo</ns17:output-dto>
+		<ns17:service-type>COMPLEX</ns17:service-type>
+	</ns17:service-object>
+	<!-- Olap Model Service -->
+	<ns17:service-object>
+		<ns17:name>AllOlapModelInfoGet</ns17:name>
+		<ns17:class-name>com.tmax.hyperdata.ui_service.so.AllOlapModelInfoGet</ns17:class-name>
+		<ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapModelInfo</ns17:input-dto>
+		<ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapModelInfoList</ns17:output-dto>
+		<ns17:service-type>COMPLEX</ns17:service-type>
+	</ns17:service-object>
+	<ns17:service-object>
+		<ns17:name>OlapModelInfoCreate</ns17:name>
+		<ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapModelInfoAdd</ns17:class-name>
+		<ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapModelInfo</ns17:input-dto>
+		<ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapModelInfo</ns17:output-dto>
+		<ns17:service-type>COMPLEX</ns17:service-type>
+	</ns17:service-object>
+	<ns17:service-object>
+		<ns17:name>OlapModelInfoUpdate</ns17:name>
+		<ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapModelInfoModify</ns17:class-name>
+		<ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapModelInfo</ns17:input-dto>
+		<ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapModelInfo</ns17:output-dto>
+		<ns17:service-type>COMPLEX</ns17:service-type>
+	</ns17:service-object>
+	<ns17:service-object>
+		<ns17:name>OlapModelInfoDelete</ns17:name>
+		<ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapModelInfoDelete</ns17:class-name>
+		<ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapModelInfo</ns17:input-dto>
+		<ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapModelInfo</ns17:output-dto>
+		<ns17:service-type>COMPLEX</ns17:service-type>
+	</ns17:service-object>
+    <!-- Olap Cube Service -->
+    <ns17:service-object>
+        <ns17:name>AllOlapCubeInfoGet</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.AllOlapCubeInfoGet</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeInfo</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeInfoList</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>OlapCubeInfoCreate</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapCubeInfoAdd</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeInfo</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeInfo</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>OlapCubeInfoUpdate</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapCubeInfoModify</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeInfo</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeInfo</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>OlapCubeInfoDelete</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapCubeInfoDelete</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeInfo</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeInfo</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <!-- Olap Fact Table Service-->
+    <ns17:service-object>
+        <ns17:name>AllFactTableInfoGet</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.AllFactTableInfoGet</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.FactTableInfo</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.FactTableInfoList</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>FactTableInfoByNameGet</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.FactTableInfoByNameGet</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.FactTableInfo</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.FactTableInfoList</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>FactTableInfoAdd</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.FactTableInfoAdd</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.FactTableInfo</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.FactTableInfo</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <!-- Olap Cube Param Service-->
+    <ns17:service-object>
+        <ns17:name>OlapCubeMeasureParamByIdGet</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapCubeMeasureParamByIdGet</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeMeasureParam</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeMeasureParamList</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+    <ns17:service-object>
+        <ns17:name>OlapCubeMeasureParamAdd</ns17:name>
+        <ns17:class-name>com.tmax.hyperdata.ui_service.so.OlapCubeMeasureParamAdd</ns17:class-name>
+        <ns17:input-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeMeasureParam</ns17:input-dto>
+        <ns17:output-dto>com.tmax.hyperdata.ui_service.dto.OlapCubeMeasureParamList</ns17:output-dto>
+        <ns17:service-type>COMPLEX</ns17:service-type>
+    </ns17:service-object>
+</ns17:service-group>
+

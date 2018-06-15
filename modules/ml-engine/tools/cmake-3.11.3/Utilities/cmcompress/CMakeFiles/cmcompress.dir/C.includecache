@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/NewData/work/hyperdata/trunk/modules/ml-engine/tools/cmake-3.11.3/Utilities/cmcompress/cmcompress.c
+cmcompress.h
+/mnt/NewData/work/hyperdata/trunk/modules/ml-engine/tools/cmake-3.11.3/Utilities/cmcompress/cmcompress.h
+errno.h
+-
+string.h
+-
+
+/mnt/NewData/work/hyperdata/trunk/modules/ml-engine/tools/cmake-3.11.3/Utilities/cmcompress/cmcompress.h
+stdio.h
+-
+

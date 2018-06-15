@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:app="http://www.tmax.co.kr/flowengine/application"
+    xmlns:flow="http://www.tmax.co.kr/flowengine/flow"
+    targetNamespace="http://www.tmax.co.kr/flowengine/application"
+>
+    <import schemaLocation="flow.xsd"           namespace="http://www.tmax.co.kr/flowengine/flow" />
+    <import schemaLocation="flowcontext.xsd"    namespace="http://www.tmax.co.kr/flowengine/flowcontext" />
+    
+    <element name="flow-application" type="app:flow-application-meta" />
+    
+    <complexType name="flow-application-meta">
+        <sequence>
+            <element name="name" type="string" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="adapter-port" type="int" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="flows" type="app:registered-flows" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="registered-flows">
+        <sequence>
+            <element name="flow" type="app:registered-flow-info" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="registered-flow-info">
+        <sequence>
+            <element name="flow" type="string" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+</schema>

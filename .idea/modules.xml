@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/modules/df-engine/hd-df-engine.iml" filepath="$PROJECT_DIR$/modules/df-engine/hd-df-engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/ml-engine/hd-ml-engine.iml" filepath="$PROJECT_DIR$/modules/ml-engine/hd-ml-engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/web-server/modules/common/hd-web-common.iml" filepath="$PROJECT_DIR$/modules/web-server/modules/common/hd-web-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/web-server/hd-web-server.iml" filepath="$PROJECT_DIR$/modules/web-server/hd-web-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/web-server/modules/servicegroup/ui-service/hd-web-ui.iml" filepath="$PROJECT_DIR$/modules/web-server/modules/servicegroup/ui-service/hd-web-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hyperdata.iml" filepath="$PROJECT_DIR$/hyperdata.iml" />
+    </modules>
+  </component>
+</project>

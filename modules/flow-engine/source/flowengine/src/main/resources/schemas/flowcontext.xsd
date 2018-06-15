@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema elementFormDefault="qualified" 
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:ctx="http://www.tmax.co.kr/flowengine/flowcontext"
+    targetNamespace="http://www.tmax.co.kr/flowengine/flowcontext"
+>
+    <complexType name="flow-context-meta">
+        <sequence>
+            <element name="variables" type="ctx:flow-variable-container" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="flow-variable-container">
+        <sequence>
+            <element name="variable" type="ctx:flow-variable" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <simpleType name="flow-variable-type">
+        <restriction base="string">
+            <enumeration value="string" />
+            <enumeration value="boolean" />
+            <enumeration value="byte" />
+            <enumeration value="int" />
+            <enumeration value="short" />
+            <enumeration value="long" />
+            <enumeration value="float" />
+            <enumeration value="byte" />
+            <enumeration value="double" />
+            <enumeration value="BigInteger" />
+            <enumeration value="BigDecimal" />
+            <enumeration value="Date" />
+            <enumeration value="Timestamp" />
+            <enumeration value="Object" />
+            <enumeration value="UserDefined" />
+        </restriction>
+    </simpleType>
+    
+    <complexType name="flow-variable">
+        <sequence>
+            <element name="name" type="string" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="type" type="ctx:flow-variable-type" minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="user-defined-class" type="string" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="array-size" type="int" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="fixed-size" type="boolean" minOccurs="0" maxOccurs="1" default="false">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="size" type="int" minOccurs="0" maxOccurs="1" default="-1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="default" type="string" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="variable" type="ctx:flow-variable-container" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+</schema>
